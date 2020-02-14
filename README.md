@@ -1,27 +1,27 @@
-# Overview
-
-#### Step-by-step
-1. Installation
-    - Clone this repository:
-        ```sh
-        git clone git@github.com:MetaCPA/landing-example.git
-        ```
-        OR
-    - Download and unzip:
+### Пример интеграции
+1. Установка
+    - Скачать и распаковать архив:
         ```sh
         https://github.com/MetaCPA/landing-example/archive/master.zip
         ```
-2. Place the files in the root directory of the site
-        `ex. /var/www/<your_domain>`
-3. Create the flow in our system(<a href="http://metacpa.ru/flow/create">link</a>)
-4. Сonfigure link with url params
+        или
+    - Клонировать репозиторий:
+        ```sh
+        git clone https://github.com/MetaCPA/landing-example.git
+        ```
+2. Переместите файлы в корневой каталог вашего сайта
+        `например /var/www/<ваш_домен>`
+3. Перейдите в Меню &gt; Потоки &gt; <a href="https://metacpa.ru/flow/index">Создать поток</a>
+4. На странице создания потока выберите оффер, укажите <b>тип потока API</b>
+5. После сохранения потока ,вы получите <b>хеш потока</b> (который указан в колонке с заголовком «URL Потока»)
+4. Настройте ссылку с вашими параметрами
     - URL<br />
-      `http://<your_domain>/land.php`
-    - URL Params<br />
-      ***Required:*** <br />
-         `flow_id` - Hash (which is specified in the column of <a href="https://metacpa.ru/flow/index">Flow page</a> with the 'Flow URL' header)<br />
-         `geo` - Location code in our system (<a href="https://metacpa.ru/city/helper">location guide</a>)<br />
-      ***Optional:*** <br />
-         `sub1, …, sub5` - Can be used any own values
-    - As a result, you will receive a link like:<br />
-    `http://<your_domain>/land.php?flow_id=...&geo=...&sub1=...&sub2=...&sub3=...&sub4=...&sub5=...`
+      `http://<ваш_домен>/land.php`
+    - Параметры URL<br />
+      ***Обязательные:*** <br />
+         `flow_id` - <b>Хеш потока</b><br />
+         `geo` - Код локации в нашей системе (<a href="https://metacpa.ru/city/helper">справочник по локациям</a>)<br />
+      ***Дополнительные:*** <br />
+         `sub1, …, sub5` - Можно использовать любые собственные значения
+    - В результате вы получите похожую ссылку:<br />
+    `http://<ваш_домен>/land.php?flow_id=...&geo=...&sub1=...&sub2=...&sub3=...&sub4=...&sub5=...`
